@@ -2,3 +2,15 @@ Machine Madness
 
 An unofficial robo rally inspired game.
 
+The game is intended to be very expandable through being coded in a highly
+procedural style (which is not the same as imperative programming).
+
+
+To get a bottom-up feel for the code, read the code in this order:
+
+
+game/orientation.py
+game/movement.py
+game/card.py
+
+
