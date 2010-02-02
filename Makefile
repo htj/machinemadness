@@ -10,5 +10,5 @@ linecount:
 	find . -name "*.py" | xargs wc -l
 
 clean:
-	rm -f _trial_temp
+	rm -rf _trial_temp
 	find . -name "*.pyc"|xargs rm
