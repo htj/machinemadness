@@ -12,5 +12,6 @@ To get a bottom-up feel for the code, read the code in this order:
 game/orientation.py
 game/movement.py
 game/card.py
+game/tile.py
 
 
