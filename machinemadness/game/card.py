@@ -1,13 +1,13 @@
 
-from machinemadness import movement
+from machinemadness.game import movement
 
 
-class _BaseCard
+class _BaseCard:
 
     sequence = None
 
     def __init__(self, priority):
-        self.priority = 
+        self.priority = priority
 
     def __cmp(self, other):
         assert isinstance(other, _BaseCard)
@@ -15,38 +15,38 @@ class _BaseCard
 
 
     def movementSequence(self):
-        if self.sequence is None
+        if self.sequence is None:
             raise NotImplementedError('_BaseCard does not support movement')
 
         return self.sequence
 
 
 
-def Forward3(_BaseCard):
+class Forward3(_BaseCard):
     sequence = 3 * [ movement.forward ]
 
 
-def Forward2(_BaseCard):
-    sequence = 2 * [ movement.foward ]
+class Forward2(_BaseCard):
+    sequence = 2 * [ movement.forward ]
 
 
-def Forward1(_BaseCard):
+class Forward1(_BaseCard):
     sequence = [ movement.forward ]
 
 
-def Backwards1(_BaseCard):
-    sequence = [ movement.forward ]
+class Backwards1(_BaseCard):
+    sequence = [ movement.backwards ]
 
 
-def RotateLeft(_BaseCard):
+class RotateLeft(_BaseCard):
     sequence = [ movement.rotateleft ]
 
 
-def RotateRight(_BaseCard):
+class RotateRight(_BaseCard):
     sequence = [ movement.rotateright ]
 
 
-def UTurn(_BaseCard):
+class UTurn(_BaseCard):
     sequence = [ movement.uturn ]
 
 
